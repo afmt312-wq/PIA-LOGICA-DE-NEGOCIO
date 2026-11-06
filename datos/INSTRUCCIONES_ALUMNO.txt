@@ -1,0 +1,33 @@
+# FarmaExpress — PIA Componentes de Lógica de Negocio
+Giro: pedidos de farmacia. Actores: comprador. Recurso principal: producto farmacéutico.
+
+## Contenido
+- 01_Alumno/datos: 40 actores, 20 recursos, 60 operaciones, detalle, 120 casos de prueba y 20 pruebas de transición.
+- La solución y los resultados esperados se reservan al docente.
+- Todos los registros son FICTICIOS. Importes en MXN, fechas ISO 8601, codificación CSV UTF-8 con BOM.
+- Las operaciones arrancan en **CREADO**; los cambios de estado deben ejecutarse mediante el código del alumno.
+
+## Flujo de referencia propuesto (NO es un requerimiento original)
+CREADO → VALIDADO → PREPARADO → ENTREGADO; cancelación alternativa: CREADO → CANCELADO.
+Estados sugeridos: CREADO, VALIDADO, PREPARADO, ENTREGADO, CANCELADO.
+Precondiciones de ejemplo: cliente_activo, stock_suficiente, producto_habilitado.
+
+## Reglas de prueba ilustrativas
+1. `puede_procesarse`: actor activo AND operación con al menos una línea AND autorización.
+2. `beneficio_referencia`: actor preferente AND total >= 1500 MXN AND NOT promoción activa.
+3. Se exige implementar al menos tres Specifications y combinar AND/OR/NOT, una máquina de estados y Domain Events.
+4. Validar cantidades, disponibilidad/capacidad, importes y transiciones inválidas.
+5. Contrastar respuestas de API con 200/201, 400/409/422 y 404 según el contrato del equipo.
+
+**IMPORTANTE:** las reglas, estados, importes y datos anteriores son un **modelo de pruebas propuesto** para este paquete. El PIA oficial exige que la implementación se derive del BRD, ≥15 historias de usuario/Gherkin, BPMN y diseño DDD/UML elaborados por el equipo en U2/U3. Si difieren, documentar las diferencias y adaptar fixtures y oráculos; no reemplazar los requerimientos propios con estas reglas.
+
+## Secuencia para estudiantes
+1. Abrir actores.csv y catalogo.csv; revisar IDs y tipos.
+2. Importar operaciones.csv y detalle_operaciones.csv usando claves foráneas.
+3. Calcular total = suma(precio_mxn × cantidad) con Decimal.
+4. Ejecutar casos_prueba.csv; anotar resultado y evidencia para cada caso.
+5. Ejecutar transiciones_prueba.csv; registrar estado final, evento o excepción.
+6. Ejecutar tests unitarios y de integración; documentar cobertura >=80%.
+7. Demostrar API REST, OpenAPI, Docker Compose (DB + App + Tests) y CI/CD.
+8. Adjuntar matriz de trazabilidad BRD → regla → componente → prueba.
+
