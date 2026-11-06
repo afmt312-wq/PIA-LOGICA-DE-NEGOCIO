@@ -1,0 +1,21 @@
+﻿recurso_id,descripcion,precio_mxn,capacidad_o_stock,habilitado
+FAR-P001,Paracetamol OTC 01,451.00,13,1
+FAR-P002,Vitamina C 02,522.00,16,1
+FAR-P003,Termómetro 03,593.00,19,1
+FAR-P004,Curitas 04,664.00,22,1
+FAR-P005,Paracetamol OTC 05,735.00,25,1
+FAR-P006,Vitamina C 06,806.00,28,1
+FAR-P007,Termómetro 07,877.00,31,1
+FAR-P008,Curitas 08,948.00,34,1
+FAR-P009,Paracetamol OTC 09,1019.00,37,1
+FAR-P010,Vitamina C 10,1090.00,40,1
+FAR-P011,Termómetro 11,1161.00,43,0
+FAR-P012,Curitas 12,1232.00,46,1
+FAR-P013,Paracetamol OTC 13,1303.00,49,1
+FAR-P014,Vitamina C 14,1374.00,52,1
+FAR-P015,Termómetro 15,1445.00,10,1
+FAR-P016,Curitas 16,1516.00,13,1
+FAR-P017,Paracetamol OTC 17,1587.00,16,1
+FAR-P018,Vitamina C 18,1658.00,19,1
+FAR-P019,Termómetro 19,1729.00,22,1
+FAR-P020,Curitas 20,1800.00,25,1
